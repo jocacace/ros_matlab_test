@@ -1,5 +1,5 @@
-%% This function receives and save in a global variable laser scanner data
-%  from a ROS topic
+%% This function subscribe to a topic containing laser scanner data
+%  
 %%
  % Copyright (C) 2017, Jonathan Cacace.
  % Email id : jonathan.cacace@gmail.com
@@ -27,7 +27,24 @@
  % POSSIBILITY OF SUCH DAMAGE.
  %
 %%
-function get_laser(~, message)
+function plot_laser( )
     global laser_msg;
-    laser_msg = message;
+    %ROS_MASTER_URI
+    ros_master_ip = 'http://192.168.1.5:11311';
+    %ROS_HOSTNAME
+    matlab_ip = '192.168.1.13';
+    %Connect to an external ROS Network, setting ROS_MASTER_URI and
+    %ROS_HOSTNAME
+    rosinit(ros_master_ip, 'NodeHost', matlab_ip);
+    pause(2) % wait a bit the roscore initialization
+    
+    laser_sub = rossubscriber( '/scan', @get_laser );
+    r = rosrate(2); % 2 Hz loop rate 
+    for i=1:50
+        plot(laser_msg,'MaximumRange',7) %Plot MaximumRange field of the laser_msg 
+        waitfor(r);
+    end
+    %Shutdown ROS connection
+    rosshutdown
+    close all
 end

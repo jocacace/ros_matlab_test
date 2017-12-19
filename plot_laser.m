@@ -1,5 +1,5 @@
-%% This function receives in input the name of a topic containing laser scanner data
-%  a plot them
+%% This function subscribe to a topic containing laser scanner data plotting them
+%  
 %%
  % Copyright (C) 2017, Jonathan Cacace.
  % Email id : jonathan.cacace@gmail.com
@@ -27,7 +27,7 @@
  % POSSIBILITY OF SUCH DAMAGE.
  %
 %%
-function plot_laser( topic_name )
+function plot_laser( )
     global laser_msg;
     %ROS_MASTER_URI
     ros_master_ip = 'http://192.168.1.5:11311';
@@ -38,7 +38,7 @@ function plot_laser( topic_name )
     rosinit(ros_master_ip, 'NodeHost', matlab_ip);
     pause(2) % wait a bit the roscore initialization
     
-    laser_sub = rossubscriber( topic_name, @get_laser );
+    laser_sub = rossubscriber( '/scan', @get_laser );
     r = rosrate(2); % 2 Hz loop rate 
     for i=1:50
         plot(laser_msg,'MaximumRange',7) %Plot MaximumRange field of the laser_msg 
