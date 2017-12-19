@@ -1,4 +1,5 @@
 %ROS_MASTER_URI
+rosshutdown
 ros_master_ip = 'http://192.168.1.5:11311';
 %ROS_HOSTNAME
 matlab_ip = '192.168.1.13';
