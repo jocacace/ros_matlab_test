@@ -30,9 +30,9 @@
 function plot_laser( )
     global laser_msg;
     %ROS_MASTER_URI
-    ros_master_ip = 'http://192.168.1.5:11311';
+    ros_master_ip = 'http://192.168.1.9:11311';
     %ROS_HOSTNAME
-    matlab_ip = '192.168.1.13';
+    matlab_ip = '192.168.1.4';
     %Connect to an external ROS Network, setting ROS_MASTER_URI and
     %ROS_HOSTNAME
     rosinit(ros_master_ip, 'NodeHost', matlab_ip);
@@ -41,7 +41,7 @@ function plot_laser( )
     laser_sub = rossubscriber( '/scan', @get_laser );
     r = rosrate(2); % 2 Hz loop rate 
     for i=1:50
-        plot(laser_msg,'MaximumRange',7) %Plot MaximumRange field of the laser_msg 
+        plot(laser_msg, 'MaximumRange', 7   ) %Plot laser_msg 
         waitfor(r);
     end
     %Shutdown ROS connection
