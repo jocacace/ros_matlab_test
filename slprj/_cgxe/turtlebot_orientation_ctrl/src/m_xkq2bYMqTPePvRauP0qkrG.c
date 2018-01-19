@@ -1,7 +1,7 @@
 /* Include files */
 
 #include "modelInterface.h"
-#include "m_Muaidk3Mt9YKJ8xvv4B4QE.h"
+#include "m_xkq2bYMqTPePvRauP0qkrG.h"
 #include "mwmathutil.h"
 
 /* Type Definitions */
@@ -13,7 +13,7 @@
 /* Variable Definitions */
 static const mxArray *eml_mx;
 static const mxArray *b_eml_mx;
-static emlrtRSInfo emlrtRSI = { 1,     /* lineNo */
+static emlrtRSInfo emlrtRSI = { 28,    /* lineNo */
   "ros_rate",                          /* fcnName */
   "C:\\Users\\jonat\\Desktop\\ros_matlab_test\\ros_rate.m"/* pathName */
 };
@@ -48,7 +48,7 @@ static emlrtRSInfo g_emlrtRSI = { 17,  /* lineNo */
   ""                                   /* pathName */
 };
 
-static emlrtRSInfo h_emlrtRSI = { 22,  /* lineNo */
+static emlrtRSInfo h_emlrtRSI = { 49,  /* lineNo */
   "ros_rate",                          /* fcnName */
   "C:\\Users\\jonat\\Desktop\\ros_matlab_test\\ros_rate.m"/* pathName */
 };
@@ -123,7 +123,7 @@ static emlrtRSInfo v_emlrtRSI = { 29,  /* lineNo */
   ""                                   /* pathName */
 };
 
-static emlrtRSInfo w_emlrtRSI = { 28,  /* lineNo */
+static emlrtRSInfo w_emlrtRSI = { 55,  /* lineNo */
   "ros_rate",                          /* fcnName */
   "C:\\Users\\jonat\\Desktop\\ros_matlab_test\\ros_rate.m"/* pathName */
 };
@@ -330,17 +330,17 @@ static emlrtRSInfo mb_emlrtRSI = { 410,/* lineNo */
 /* Function Declarations */
 static void SystemCore_setup(const emlrtStack *sp, ros_rate *obj);
 static real_T Rate_getIndexOfOldestPeriod(robotics_Rate *obj);
-static void cgxe_mdl_start(InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE *moduleInstance);
-static void cgxe_mdl_initialize(InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE
+static void cgxe_mdl_start(InstanceStruct_xkq2bYMqTPePvRauP0qkrG *moduleInstance);
+static void cgxe_mdl_initialize(InstanceStruct_xkq2bYMqTPePvRauP0qkrG
   *moduleInstance);
-static void cgxe_mdl_outputs(InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE
+static void cgxe_mdl_outputs(InstanceStruct_xkq2bYMqTPePvRauP0qkrG
   *moduleInstance);
-static void cgxe_mdl_update(InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE
+static void cgxe_mdl_update(InstanceStruct_xkq2bYMqTPePvRauP0qkrG
   *moduleInstance);
-static void cgxe_mdl_terminate(InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE
+static void cgxe_mdl_terminate(InstanceStruct_xkq2bYMqTPePvRauP0qkrG
   *moduleInstance);
 static const mxArray *cgxe_mdl_get_sim_state
-  (InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE *moduleInstance);
+  (InstanceStruct_xkq2bYMqTPePvRauP0qkrG *moduleInstance);
 static void emlrt_marshallIn(const emlrtStack *sp, const mxArray *b_sysobj,
   const char_T *identifier, ros_rate *y);
 static void b_emlrt_marshallIn(const emlrtStack *sp, const mxArray *u, const
@@ -359,7 +359,7 @@ static b_robotics_core_internal_OverrunActions h_emlrt_marshallIn(const
   emlrtStack *sp, const mxArray *u, const emlrtMsgIdentifier *parentId);
 static boolean_T i_emlrt_marshallIn(const emlrtStack *sp, const mxArray
   *b_sysobj_not_empty, const char_T *identifier);
-static void cgxe_mdl_set_sim_state(InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE
+static void cgxe_mdl_set_sim_state(InstanceStruct_xkq2bYMqTPePvRauP0qkrG
   *moduleInstance, const mxArray *st);
 static const mxArray *message(const emlrtStack *sp, const mxArray *b, const
   mxArray *c, emlrtMCInfo *location);
@@ -381,7 +381,7 @@ static boolean_T k_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src,
   const emlrtMsgIdentifier *msgId);
 static real_T l_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src, const
   emlrtMsgIdentifier *msgId);
-static void init_simulink_io_address(InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE
+static void init_simulink_io_address(InstanceStruct_xkq2bYMqTPePvRauP0qkrG
   *moduleInstance);
 
 /* Function Definitions */
@@ -452,7 +452,7 @@ static void SystemCore_setup(const emlrtStack *sp, ros_rate *obj)
   int32_T exitg1;
   static char_T cv0[4] = { 'd', 'r', 'o', 'p' };
 
-  int32_T u_size[2];
+  int32_T u_sizes[2];
   char_T u_data[29];
   static char_T cv1[7] = { 'A', 'c', 't', 'i', 'o', 'n', ' ' };
 
@@ -663,8 +663,8 @@ static void SystemCore_setup(const emlrtStack *sp, ros_rate *obj)
     break;
 
    default:
-    u_size[0] = 1;
-    u_size[1] = 29;
+    u_sizes[0] = 1;
+    u_sizes[1] = 29;
     for (kstr = 0; kstr < 7; kstr++) {
       u_data[kstr] = cv1[kstr];
     }
@@ -678,7 +678,7 @@ static void SystemCore_setup(const emlrtStack *sp, ros_rate *obj)
     }
 
     y = NULL;
-    m0 = emlrtCreateCharArray(2, u_size);
+    m0 = emlrtCreateCharArray(2, u_sizes);
     emlrtInitCharArrayR2013a(&c_st, 29, m0, &u_data[0]);
     emlrtAssign(&y, m0);
     d_st.site = &ib_emlrtRSI;
@@ -805,7 +805,7 @@ static real_T Rate_getIndexOfOldestPeriod(robotics_Rate *obj)
   return r + 1.0;
 }
 
-static void cgxe_mdl_start(InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE *moduleInstance)
+static void cgxe_mdl_start(InstanceStruct_xkq2bYMqTPePvRauP0qkrG *moduleInstance)
 {
   emlrtStack st = { NULL,              /* site */
     NULL,                              /* tls */
@@ -845,15 +845,15 @@ static void cgxe_mdl_start(InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE *moduleInstance
 
   /* Initialize Function Information */
   covrtFcnInit(moduleInstance->covInst_CONTAINER_BLOCK_INDEX, 0U, 0U,
-               "ros_rate_ros_rate", 9, -1, 17);
+               "ros_rate_ros_rate", 1633, -1, 1641);
   covrtFcnInit(moduleInstance->covInst_CONTAINER_BLOCK_INDEX, 0U, 1U,
-               "ros_rate_stepImpl", 515, -1, 692);
+               "ros_rate_stepImpl", 2139, -1, 2316);
 
   /* Initialize Basic Block Information */
-  covrtBasicBlockInit(moduleInstance->covInst_CONTAINER_BLOCK_INDEX, 0U, 0U, 9,
-                      -1, 17);
-  covrtBasicBlockInit(moduleInstance->covInst_CONTAINER_BLOCK_INDEX, 0U, 1U, 657,
-                      -1, 678);
+  covrtBasicBlockInit(moduleInstance->covInst_CONTAINER_BLOCK_INDEX, 0U, 0U,
+                      1633, -1, 1641);
+  covrtBasicBlockInit(moduleInstance->covInst_CONTAINER_BLOCK_INDEX, 0U, 1U,
+                      2281, -1, 2302);
 
   /* Initialize If Information */
   /* Initialize MCDC Information */
@@ -867,6 +867,33 @@ static void cgxe_mdl_start(InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE *moduleInstance
     obj = &moduleInstance->sysobj;
     covrtLogFcn(moduleInstance->covInst_CONTAINER_BLOCK_INDEX, 0, 0);
     covrtLogBasicBlock(moduleInstance->covInst_CONTAINER_BLOCK_INDEX, 0, 0);
+
+    /*  Copyright (C) 2017, Jonathan Cacace. */
+    /*  Email id : jonathan.cacace@gmail.com */
+    /*  Redistribution and use in source and binary forms, with or without */
+    /*  modification, are permitted provided that the following conditions are met: */
+    /*    * Redistributions of source code must retain the above copyright notice, */
+    /*      this list of conditions and the following disclaimer. */
+    /*    * Redistributions in binary form must reproduce the above copyright */
+    /*      notice, this list of conditions and the following disclaimer in the */
+    /*      documentation and/or other materials provided with the distribution. */
+    /*    * Neither the names of Stanford University or Willow Garage, Inc. nor the names of its */
+    /*      contributors may be used to endorse or promote products derived from */
+    /*      this software without specific prior written permission. */
+    /*  */
+    /*  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" */
+    /*  AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE */
+    /*  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE */
+    /*  ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE */
+    /*  LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR */
+    /*  CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF */
+    /*  SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS */
+    /*  INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN */
+    /*  CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) */
+    /*  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE */
+    /*  POSSIBILITY OF SUCH DAMAGE. */
+    /*  */
+    /*  */
     c_st.site = &emlrtRSI;
     d_st.site = &b_emlrtRSI;
     e_st.site = &c_emlrtRSI;
@@ -889,7 +916,7 @@ static void cgxe_mdl_start(InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE *moduleInstance
   cgxertRestoreGcb(moduleInstance->S, -1, -1);
 }
 
-static void cgxe_mdl_initialize(InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE
+static void cgxe_mdl_initialize(InstanceStruct_xkq2bYMqTPePvRauP0qkrG
   *moduleInstance)
 {
   emlrtStack st = { NULL,              /* site */
@@ -900,18 +927,15 @@ static void cgxe_mdl_initialize(InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE
   emlrtStack b_st;
   ros_rate *obj;
   const mxArray *y;
-  emlrtStack c_st;
   boolean_T tunablePropChangedBeforeResetImpl;
   const mxArray *m3;
   static const int32_T iv16[2] = { 1, 45 };
 
-  emlrtStack d_st;
   static char_T u[45] = { 'M', 'A', 'T', 'L', 'A', 'B', ':', 's', 'y', 's', 't',
     'e', 'm', ':', 'm', 'e', 't', 'h', 'o', 'd', 'C', 'a', 'l', 'l', 'e', 'd',
     'W', 'h', 'e', 'n', 'R', 'e', 'l', 'e', 'a', 's', 'e', 'd', 'C', 'o', 'd',
     'e', 'g', 'e', 'n' };
 
-  emlrtStack e_st;
   static const int32_T iv17[2] = { 1, 44 };
 
   const mxArray *b_y;
@@ -924,6 +948,9 @@ static void cgxe_mdl_initialize(InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE
 
   static char_T c_u[5] = { 'r', 'e', 's', 'e', 't' };
 
+  emlrtStack c_st;
+  emlrtStack d_st;
+  emlrtStack e_st;
   real_T *b_RATE;
   b_RATE = (real_T *)cgxertGetRunTimeParamInfoData(moduleInstance->S, 0);
   st.tls = moduleInstance->emlrtRootTLSGlobal;
@@ -935,6 +962,33 @@ static void cgxe_mdl_initialize(InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE
     obj = &moduleInstance->sysobj;
     covrtLogFcn(moduleInstance->covInst_CONTAINER_BLOCK_INDEX, 0, 0);
     covrtLogBasicBlock(moduleInstance->covInst_CONTAINER_BLOCK_INDEX, 0, 0);
+
+    /*  Copyright (C) 2017, Jonathan Cacace. */
+    /*  Email id : jonathan.cacace@gmail.com */
+    /*  Redistribution and use in source and binary forms, with or without */
+    /*  modification, are permitted provided that the following conditions are met: */
+    /*    * Redistributions of source code must retain the above copyright notice, */
+    /*      this list of conditions and the following disclaimer. */
+    /*    * Redistributions in binary form must reproduce the above copyright */
+    /*      notice, this list of conditions and the following disclaimer in the */
+    /*      documentation and/or other materials provided with the distribution. */
+    /*    * Neither the names of Stanford University or Willow Garage, Inc. nor the names of its */
+    /*      contributors may be used to endorse or promote products derived from */
+    /*      this software without specific prior written permission. */
+    /*  */
+    /*  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" */
+    /*  AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE */
+    /*  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE */
+    /*  ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE */
+    /*  LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR */
+    /*  CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF */
+    /*  SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS */
+    /*  INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN */
+    /*  CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) */
+    /*  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE */
+    /*  POSSIBILITY OF SUCH DAMAGE. */
+    /*  */
+    /*  */
     c_st.site = &emlrtRSI;
     d_st.site = &b_emlrtRSI;
     e_st.site = &c_emlrtRSI;
@@ -980,7 +1034,7 @@ static void cgxe_mdl_initialize(InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE
   cgxertRestoreGcb(moduleInstance->S, -1, -1);
 }
 
-static void cgxe_mdl_outputs(InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE
+static void cgxe_mdl_outputs(InstanceStruct_xkq2bYMqTPePvRauP0qkrG
   *moduleInstance)
 {
   emlrtStack st = { NULL,              /* site */
@@ -1085,6 +1139,33 @@ static void cgxe_mdl_outputs(InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE
     obj = &moduleInstance->sysobj;
     covrtLogFcn(moduleInstance->covInst_CONTAINER_BLOCK_INDEX, 0, 0);
     covrtLogBasicBlock(moduleInstance->covInst_CONTAINER_BLOCK_INDEX, 0, 0);
+
+    /*  Copyright (C) 2017, Jonathan Cacace. */
+    /*  Email id : jonathan.cacace@gmail.com */
+    /*  Redistribution and use in source and binary forms, with or without */
+    /*  modification, are permitted provided that the following conditions are met: */
+    /*    * Redistributions of source code must retain the above copyright notice, */
+    /*      this list of conditions and the following disclaimer. */
+    /*    * Redistributions in binary form must reproduce the above copyright */
+    /*      notice, this list of conditions and the following disclaimer in the */
+    /*      documentation and/or other materials provided with the distribution. */
+    /*    * Neither the names of Stanford University or Willow Garage, Inc. nor the names of its */
+    /*      contributors may be used to endorse or promote products derived from */
+    /*      this software without specific prior written permission. */
+    /*  */
+    /*  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" */
+    /*  AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE */
+    /*  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE */
+    /*  ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE */
+    /*  LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR */
+    /*  CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF */
+    /*  SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS */
+    /*  INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN */
+    /*  CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) */
+    /*  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE */
+    /*  POSSIBILITY OF SUCH DAMAGE. */
+    /*  */
+    /*  */
     c_st.site = &emlrtRSI;
     d_st.site = &b_emlrtRSI;
     e_st.site = &c_emlrtRSI;
@@ -1317,14 +1398,14 @@ static void cgxe_mdl_outputs(InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE
   cgxertRestoreGcb(moduleInstance->S, -1, -1);
 }
 
-static void cgxe_mdl_update(InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE
+static void cgxe_mdl_update(InstanceStruct_xkq2bYMqTPePvRauP0qkrG
   *moduleInstance)
 {
   cgxertSetGcb(moduleInstance->S, -1, -1);
   cgxertRestoreGcb(moduleInstance->S, -1, -1);
 }
 
-static void cgxe_mdl_terminate(InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE
+static void cgxe_mdl_terminate(InstanceStruct_xkq2bYMqTPePvRauP0qkrG
   *moduleInstance)
 {
   emlrtStack st = { NULL,              /* site */
@@ -1335,18 +1416,15 @@ static void cgxe_mdl_terminate(InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE
   emlrtStack b_st;
   ros_rate *obj;
   const mxArray *y;
-  emlrtStack c_st;
   boolean_T flag;
   const mxArray *m6;
   static const int32_T iv30[2] = { 1, 45 };
 
-  emlrtStack d_st;
   static char_T u[45] = { 'M', 'A', 'T', 'L', 'A', 'B', ':', 's', 'y', 's', 't',
     'e', 'm', ':', 'm', 'e', 't', 'h', 'o', 'd', 'C', 'a', 'l', 'l', 'e', 'd',
     'W', 'h', 'e', 'n', 'R', 'e', 'l', 'e', 'a', 's', 'e', 'd', 'C', 'o', 'd',
     'e', 'g', 'e', 'n' };
 
-  emlrtStack e_st;
   const mxArray *b_y;
   static const int32_T iv31[2] = { 1, 8 };
 
@@ -1358,6 +1436,9 @@ static void cgxe_mdl_terminate(InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE
 
   static char_T c_u[7] = { 'r', 'e', 'l', 'e', 'a', 's', 'e' };
 
+  emlrtStack c_st;
+  emlrtStack d_st;
+  emlrtStack e_st;
   real_T *b_RATE;
   b_RATE = (real_T *)cgxertGetRunTimeParamInfoData(moduleInstance->S, 0);
   st.tls = moduleInstance->emlrtRootTLSGlobal;
@@ -1371,6 +1452,33 @@ static void cgxe_mdl_terminate(InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE
     obj = &moduleInstance->sysobj;
     covrtLogFcn(moduleInstance->covInst_CONTAINER_BLOCK_INDEX, 0, 0);
     covrtLogBasicBlock(moduleInstance->covInst_CONTAINER_BLOCK_INDEX, 0, 0);
+
+    /*  Copyright (C) 2017, Jonathan Cacace. */
+    /*  Email id : jonathan.cacace@gmail.com */
+    /*  Redistribution and use in source and binary forms, with or without */
+    /*  modification, are permitted provided that the following conditions are met: */
+    /*    * Redistributions of source code must retain the above copyright notice, */
+    /*      this list of conditions and the following disclaimer. */
+    /*    * Redistributions in binary form must reproduce the above copyright */
+    /*      notice, this list of conditions and the following disclaimer in the */
+    /*      documentation and/or other materials provided with the distribution. */
+    /*    * Neither the names of Stanford University or Willow Garage, Inc. nor the names of its */
+    /*      contributors may be used to endorse or promote products derived from */
+    /*      this software without specific prior written permission. */
+    /*  */
+    /*  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" */
+    /*  AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE */
+    /*  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE */
+    /*  ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE */
+    /*  LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR */
+    /*  CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF */
+    /*  SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS */
+    /*  INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN */
+    /*  CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) */
+    /*  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE */
+    /*  POSSIBILITY OF SUCH DAMAGE. */
+    /*  */
+    /*  */
     c_st.site = &emlrtRSI;
     d_st.site = &b_emlrtRSI;
     e_st.site = &c_emlrtRSI;
@@ -1429,7 +1537,7 @@ static void cgxe_mdl_terminate(InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE
 }
 
 static const mxArray *cgxe_mdl_get_sim_state
-  (InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE *moduleInstance)
+  (InstanceStruct_xkq2bYMqTPePvRauP0qkrG *moduleInstance)
 {
   const mxArray *st;
   emlrtStack b_st = { NULL,            /* site */
@@ -1692,7 +1800,7 @@ static boolean_T i_emlrt_marshallIn(const emlrtStack *sp, const mxArray
   return y;
 }
 
-static void cgxe_mdl_set_sim_state(InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE
+static void cgxe_mdl_set_sim_state(InstanceStruct_xkq2bYMqTPePvRauP0qkrG
   *moduleInstance, const mxArray *st)
 {
   emlrtStack b_st = { NULL,            /* site */
@@ -1819,7 +1927,7 @@ static real_T l_emlrt_marshallIn(const emlrtStack *sp, const mxArray *src, const
   return ret;
 }
 
-static void init_simulink_io_address(InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE
+static void init_simulink_io_address(InstanceStruct_xkq2bYMqTPePvRauP0qkrG
   *moduleInstance)
 {
   moduleInstance->emlrtRootTLSGlobal = (void *)cgxertGetEMLRTCtx
@@ -1829,62 +1937,62 @@ static void init_simulink_io_address(InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE
 }
 
 /* CGXE Glue Code */
-static void mdlOutputs_Muaidk3Mt9YKJ8xvv4B4QE(SimStruct *S, int_T tid)
+static void mdlOutputs_xkq2bYMqTPePvRauP0qkrG(SimStruct *S, int_T tid)
 {
-  InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE *moduleInstance =
-    (InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE *)cgxertGetRuntimeInstance(S);
+  InstanceStruct_xkq2bYMqTPePvRauP0qkrG *moduleInstance =
+    (InstanceStruct_xkq2bYMqTPePvRauP0qkrG *)cgxertGetRuntimeInstance(S);
   cgxe_mdl_outputs(moduleInstance);
 }
 
-static void mdlInitialize_Muaidk3Mt9YKJ8xvv4B4QE(SimStruct *S)
+static void mdlInitialize_xkq2bYMqTPePvRauP0qkrG(SimStruct *S)
 {
-  InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE *moduleInstance =
-    (InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE *)cgxertGetRuntimeInstance(S);
+  InstanceStruct_xkq2bYMqTPePvRauP0qkrG *moduleInstance =
+    (InstanceStruct_xkq2bYMqTPePvRauP0qkrG *)cgxertGetRuntimeInstance(S);
   cgxe_mdl_initialize(moduleInstance);
 }
 
-static void mdlUpdate_Muaidk3Mt9YKJ8xvv4B4QE(SimStruct *S, int_T tid)
+static void mdlUpdate_xkq2bYMqTPePvRauP0qkrG(SimStruct *S, int_T tid)
 {
-  InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE *moduleInstance =
-    (InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE *)cgxertGetRuntimeInstance(S);
+  InstanceStruct_xkq2bYMqTPePvRauP0qkrG *moduleInstance =
+    (InstanceStruct_xkq2bYMqTPePvRauP0qkrG *)cgxertGetRuntimeInstance(S);
   cgxe_mdl_update(moduleInstance);
 }
 
-static mxArray* getSimState_Muaidk3Mt9YKJ8xvv4B4QE(SimStruct *S)
+static mxArray* getSimState_xkq2bYMqTPePvRauP0qkrG(SimStruct *S)
 {
   mxArray* mxSS;
-  InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE *moduleInstance =
-    (InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE *)cgxertGetRuntimeInstance(S);
+  InstanceStruct_xkq2bYMqTPePvRauP0qkrG *moduleInstance =
+    (InstanceStruct_xkq2bYMqTPePvRauP0qkrG *)cgxertGetRuntimeInstance(S);
   mxSS = (mxArray *) cgxe_mdl_get_sim_state(moduleInstance);
   return mxSS;
 }
 
-static void setSimState_Muaidk3Mt9YKJ8xvv4B4QE(SimStruct *S, const mxArray *ss)
+static void setSimState_xkq2bYMqTPePvRauP0qkrG(SimStruct *S, const mxArray *ss)
 {
-  InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE *moduleInstance =
-    (InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE *)cgxertGetRuntimeInstance(S);
+  InstanceStruct_xkq2bYMqTPePvRauP0qkrG *moduleInstance =
+    (InstanceStruct_xkq2bYMqTPePvRauP0qkrG *)cgxertGetRuntimeInstance(S);
   cgxe_mdl_set_sim_state(moduleInstance, emlrtAlias(ss));
 }
 
-static void mdlTerminate_Muaidk3Mt9YKJ8xvv4B4QE(SimStruct *S)
+static void mdlTerminate_xkq2bYMqTPePvRauP0qkrG(SimStruct *S)
 {
-  InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE *moduleInstance =
-    (InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE *)cgxertGetRuntimeInstance(S);
+  InstanceStruct_xkq2bYMqTPePvRauP0qkrG *moduleInstance =
+    (InstanceStruct_xkq2bYMqTPePvRauP0qkrG *)cgxertGetRuntimeInstance(S);
   cgxe_mdl_terminate(moduleInstance);
   free((void *)moduleInstance);
 }
 
-static void mdlStart_Muaidk3Mt9YKJ8xvv4B4QE(SimStruct *S)
+static void mdlStart_xkq2bYMqTPePvRauP0qkrG(SimStruct *S)
 {
-  InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE *moduleInstance =
-    (InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE *)calloc(1, sizeof
-    (InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE));
+  InstanceStruct_xkq2bYMqTPePvRauP0qkrG *moduleInstance =
+    (InstanceStruct_xkq2bYMqTPePvRauP0qkrG *)calloc(1, sizeof
+    (InstanceStruct_xkq2bYMqTPePvRauP0qkrG));
   moduleInstance->S = S;
   cgxertSetRuntimeInstance(S, (void *)moduleInstance);
-  ssSetmdlOutputs(S, mdlOutputs_Muaidk3Mt9YKJ8xvv4B4QE);
-  ssSetmdlInitializeConditions(S, mdlInitialize_Muaidk3Mt9YKJ8xvv4B4QE);
-  ssSetmdlUpdate(S, mdlUpdate_Muaidk3Mt9YKJ8xvv4B4QE);
-  ssSetmdlTerminate(S, mdlTerminate_Muaidk3Mt9YKJ8xvv4B4QE);
+  ssSetmdlOutputs(S, mdlOutputs_xkq2bYMqTPePvRauP0qkrG);
+  ssSetmdlInitializeConditions(S, mdlInitialize_xkq2bYMqTPePvRauP0qkrG);
+  ssSetmdlUpdate(S, mdlUpdate_xkq2bYMqTPePvRauP0qkrG);
+  ssSetmdlTerminate(S, mdlTerminate_xkq2bYMqTPePvRauP0qkrG);
   cgxe_mdl_start(moduleInstance);
 
   {
@@ -1894,42 +2002,42 @@ static void mdlStart_Muaidk3Mt9YKJ8xvv4B4QE(SimStruct *S)
   }
 }
 
-static void mdlProcessParameters_Muaidk3Mt9YKJ8xvv4B4QE(SimStruct *S)
+static void mdlProcessParameters_xkq2bYMqTPePvRauP0qkrG(SimStruct *S)
 {
 }
 
-void method_dispatcher_Muaidk3Mt9YKJ8xvv4B4QE(SimStruct *S, int_T method, void
+void method_dispatcher_xkq2bYMqTPePvRauP0qkrG(SimStruct *S, int_T method, void
   *data)
 {
   switch (method) {
    case SS_CALL_MDL_START:
-    mdlStart_Muaidk3Mt9YKJ8xvv4B4QE(S);
+    mdlStart_xkq2bYMqTPePvRauP0qkrG(S);
     break;
 
    case SS_CALL_MDL_PROCESS_PARAMETERS:
-    mdlProcessParameters_Muaidk3Mt9YKJ8xvv4B4QE(S);
+    mdlProcessParameters_xkq2bYMqTPePvRauP0qkrG(S);
     break;
 
    case SS_CALL_MDL_GET_SIM_STATE:
-    *((mxArray**) data) = getSimState_Muaidk3Mt9YKJ8xvv4B4QE(S);
+    *((mxArray**) data) = getSimState_xkq2bYMqTPePvRauP0qkrG(S);
     break;
 
    case SS_CALL_MDL_SET_SIM_STATE:
-    setSimState_Muaidk3Mt9YKJ8xvv4B4QE(S, (const mxArray *) data);
+    setSimState_xkq2bYMqTPePvRauP0qkrG(S, (const mxArray *) data);
     break;
 
    default:
     /* Unhandled method */
     /*
        sf_mex_error_message("Stateflow Internal Error:\n"
-       "Error calling method dispatcher for module: Muaidk3Mt9YKJ8xvv4B4QE.\n"
+       "Error calling method dispatcher for module: xkq2bYMqTPePvRauP0qkrG.\n"
        "Can't handle method %d.\n", method);
      */
     break;
   }
 }
 
-mxArray *cgxe_Muaidk3Mt9YKJ8xvv4B4QE_BuildInfoUpdate(void)
+mxArray *cgxe_xkq2bYMqTPePvRauP0qkrG_BuildInfoUpdate(void)
 {
   mxArray * mxBIArgs;
   mxArray * elem_1;
@@ -1987,7 +2095,7 @@ mxArray *cgxe_Muaidk3Mt9YKJ8xvv4B4QE_BuildInfoUpdate(void)
   return mxBIArgs;
 }
 
-mxArray *cgxe_Muaidk3Mt9YKJ8xvv4B4QE_fallback_info(void)
+mxArray *cgxe_xkq2bYMqTPePvRauP0qkrG_fallback_info(void)
 {
   const char* fallbackInfoFields[] = { "fallbackType", "incompatiableSymbol" };
 

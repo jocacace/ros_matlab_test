@@ -58,7 +58,7 @@ function vfh_obstacle_avoidance(ros_master_ip, matlab_ip )
     
     odom_pos_x = [];
     odom_pos_y = [];
-    while rate.TotalElapsedTime < 5
+    while rate.TotalElapsedTime < 25
 
          % Get laser scan data
          laserScan = receive(laserSub);
@@ -73,7 +73,7 @@ function vfh_obstacle_avoidance(ros_master_ip, matlab_ip )
          odom_pos_y = [odom_pos_y, odom.Pose.Pose.Position.Y];
          targetDir = (r_max-r_min).*rand();
          % Call VFH object to computer steering direction
-         steerDir = vfh(ranges, angles, targetDir);
+          steerDir= vfh(ranges, angles, targetDir);
          ob_dist = [ob_dist, min(ranges) ];
          % Calculate velocities
          if ~isnan(steerDir) % If steering direction is valid

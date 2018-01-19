@@ -1,5 +1,5 @@
-#ifndef __Muaidk3Mt9YKJ8xvv4B4QE_h__
-#define __Muaidk3Mt9YKJ8xvv4B4QE_h__
+#ifndef __xkq2bYMqTPePvRauP0qkrG_h__
+#define __xkq2bYMqTPePvRauP0qkrG_h__
 
 /* Include files */
 #include "simstruc.h"
@@ -80,8 +80,8 @@ typedef struct {
 
 #endif                                 /*typedef_ros_rate*/
 
-#ifndef typedef_InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE
-#define typedef_InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE
+#ifndef typedef_InstanceStruct_xkq2bYMqTPePvRauP0qkrG
+#define typedef_InstanceStruct_xkq2bYMqTPePvRauP0qkrG
 
 typedef struct {
   SimStruct *S;
@@ -89,9 +89,9 @@ typedef struct {
   boolean_T sysobj_not_empty;
   void *emlrtRootTLSGlobal;
   covrtInstance *covInst_CONTAINER_BLOCK_INDEX;
-} InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE;
+} InstanceStruct_xkq2bYMqTPePvRauP0qkrG;
 
-#endif                                 /*typedef_InstanceStruct_Muaidk3Mt9YKJ8xvv4B4QE*/
+#endif                                 /*typedef_InstanceStruct_xkq2bYMqTPePvRauP0qkrG*/
 
 /* Named Constants */
 
@@ -102,7 +102,7 @@ typedef struct {
 /* Function Declarations */
 
 /* Function Definitions */
-extern void method_dispatcher_Muaidk3Mt9YKJ8xvv4B4QE(SimStruct *S, int_T method,
+extern void method_dispatcher_xkq2bYMqTPePvRauP0qkrG(SimStruct *S, int_T method,
   void* data);
 
 #endif
